@@ -36,6 +36,21 @@ int disassembleInstruction(const Chunk* chunk, int offset) {
       return constantInstruction("OP_CONSTANT", chunk, offset);
     case OP_CONSTANT_LONG:
       return longConstantInstruction("OP_CONSTANT_LONG", chunk, offset);
+    case OP_ADD:
+      puts("OP_ADD");
+      return offset + 1;
+    case OP_SUBTRACT:
+      puts("OP_SUBTRACT");
+      return offset + 1;
+    case OP_MULTIPLY:
+      puts("OP_MULTIPLY");
+      return offset + 1;
+    case OP_DIVIDE:
+      puts("OP_DIVIDE");
+      return offset + 1;
+    case OP_NEGATE:
+      puts("OP_NEGATE");
+      return offset + 1;
     case OP_RETURN:
       puts("OP_RETURN");
       return offset + 1;
